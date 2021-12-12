@@ -1,0 +1,83 @@
+/*!
+  @author Mohamed Muntasir
+  @link https://github.com/devmotheg
+  */
+
+body {
+  margin: 0;
+  min-width: 500px;
+  background: #eee;
+}
+
+h1 {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.loading-background {
+  background: transparent;
+  width: 97%;
+  margin: 0.5% auto;
+  border: 0.2rem solid #333;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0.15rem;
+}
+
+.loading-background__bar {
+  width: 0;
+  background: #f44336;
+  height: 100%;
+}
+
+.loading-percentage {
+  margin: 2rem auto;
+  width: 20rem;
+  height: 0.2rem;
+  background: #333;
+}
+
+.loading-percentage span {
+  width: 0.15rem;
+  height: 4rem;
+  background: #333;
+  display: inline-block;
+  position: relative;
+  cursor: grab;
+}
+
+.loading-percentage span::after {
+  content: attr(data-percentage);
+  font-weight: bold;
+  background: transparent;
+  color: #f44336;
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  width: 2rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.15rem solid #333;
+  transform: translate(-46%, 260%);
+}
+
+.--grabbing {
+  cursor: grabbing !important;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
+}
